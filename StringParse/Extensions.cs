@@ -61,9 +61,5 @@ namespace ca.canthonyparkinson.StringParse
         public static TimeSpan? ParseTimeSpanExact(this String str, string[] formats, IFormatProvider provider) => (TimeSpan.TryParseExact(str, formats, provider, out TimeSpan val) ? new TimeSpan?(val) : null);
         public static TimeSpan? ParseTimeSpanExact(this String str, string format, IFormatProvider provider, TimeSpanStyles style) => (TimeSpan.TryParseExact(str, format, provider, style, out TimeSpan val) ? new TimeSpan?(val) : null);
         public static TimeSpan? ParseTimeSpanExact(this String str, string[] formats, IFormatProvider provider, TimeSpanStyles style) => (TimeSpan.TryParseExact(str, formats, provider, style, out TimeSpan val) ? new TimeSpan?(val) : null);
-
-        public static string IfNull(this String str, String dflt) => (str == null ? dflt : str);
-
-        public static string IfNull(this String str) => (str.IfNull(String.Empty));
     }
 }

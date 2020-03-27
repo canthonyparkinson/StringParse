@@ -48,7 +48,43 @@ namespace ca.canthonyparkinson.StringParse
         public static Single? ParseSingle(this String str) => (Single.TryParse(str, out Single val) ? new Single?(val) : null);
         public static Single? ParseSingle(this String str, NumberStyles style, IFormatProvider provider) => (Single.TryParse(str, style, provider, out Single val) ? new Single?(val) : null);
 
-        public static Boolean? ParseBoolean(this String str) => (Boolean.TryParse(str, out Boolean val) ? new Boolean?(val) : null);
+        public static Boolean? ParseBoolean(this String str)
+        {
+            if (String.IsNullOrWhiteSpace(str))
+                return null;
+
+            if (str.ToLower().Equals("true"))
+                return true;
+
+            if (str.ToLower().Equals("t"))
+                return true;
+
+            if (str.ToLower().Equals("yes"))
+                return true;
+
+            if (str.ToLower().Equals("y"))
+                return true;
+
+            if (str.ToLower().Equals("1"))
+                return true;
+
+            if (str.ToLower().Equals("false"))
+                return false;
+
+            if (str.ToLower().Equals("f"))
+                return false;
+
+            if (str.ToLower().Equals("no"))
+                return false;
+
+            if (str.ToLower().Equals("n"))
+                return false;
+
+            if (str.ToLower().Equals("0"))
+                return false;
+
+            return null;
+        }
 
         public static DateTime? ParseDateTime(this String str) => (DateTime.TryParse(str, out DateTime val) ? new DateTime?(val) : null);
         public static DateTime? ParseDateTime(this String str, IFormatProvider provider, DateTimeStyles style) => (DateTime.TryParse(str, provider, style, out DateTime val) ? new DateTime?(val) : null);

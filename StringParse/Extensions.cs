@@ -12,6 +12,9 @@ namespace ca.canthonyparkinson.StringParse
 {
     public static class Extensions
     {
+        public static bool IsNullOrEmpty(this String str) => String.IsNullOrEmpty(str);
+        public static bool IsNullOrWhiteSpace(this String str) => String.IsNullOrWhiteSpace(str);
+
         public static SByte? ParseInt8(this String str) => (SByte.TryParse(str, out SByte val) ? new SByte?(val) : null);
         public static SByte? ParseInt8(this String str, NumberStyles style, IFormatProvider provider) => (SByte.TryParse(str, style, provider, out SByte val) ? new SByte?(val) : null);
 

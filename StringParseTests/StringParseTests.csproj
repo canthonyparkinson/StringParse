@@ -58,6 +58,8 @@
     <Compile Include="TestInt8.cs" />
     <Compile Include="TestFloatType.cs" />
     <Compile Include="TestIntegerType.cs" />
+    <Compile Include="TestNullOrEmpty.cs" />
+    <Compile Include="TestNullOrWhiteSpace.cs" />
     <Compile Include="TestSingle.cs" />
     <Compile Include="TestUInt16.cs" />
     <Compile Include="TestUInt32.cs" />

@@ -10,6 +10,8 @@
     <RepositoryUrl>https://github.com/canthonyparkinson/StringParse</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageId>TryParseNullable</PackageId>
+    <Version>1.0.1</Version>
+    <Authors>canthonyparkinson@shaw.ca</Authors>
   </PropertyGroup>
 
 </Project>

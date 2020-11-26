@@ -14,6 +14,9 @@ namespace ca.canthonyparkinson.StringParse
     {
         public static bool IsNullOrEmpty(this String str) => String.IsNullOrEmpty(str);
         public static bool IsNullOrWhiteSpace(this String str) => String.IsNullOrWhiteSpace(str);
+        public static string EmptyIfNullOrEmpty(this String str) => (IsNullOrEmpty(str) ? String.Empty : str);
+        public static string EmptyIfNullOrWhiteSpace(this String str) => (IsNullOrWhiteSpace(str) ? String.Empty : str);
+        public static bool EqualsIgnoreCase(this String str, string other) => String.Compare(EmptyIfNullOrEmpty(str), EmptyIfNullOrEmpty(other), true) == 0;
 
         public static SByte? ParseInt8(this String str) => (SByte.TryParse(str, out SByte val) ? new SByte?(val) : null);
         public static SByte? ParseInt8(this String str, NumberStyles style, IFormatProvider provider) => (SByte.TryParse(str, style, provider, out SByte val) ? new SByte?(val) : null);

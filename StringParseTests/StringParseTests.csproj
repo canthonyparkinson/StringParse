@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestDouble.cs" />
+    <Compile Include="TestEqualsIgnoreCase.cs" />
     <Compile Include="TestInt16.cs" />
     <Compile Include="TestInt32.cs" />
     <Compile Include="TestInt64.cs" />

@@ -1,7 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <UserSecretsId>abc2862e-7043-4a62-b8db-01519fbb2668</UserSecretsId>
   </PropertyGroup>
 
@@ -10,7 +10,7 @@
     <RepositoryUrl>https://github.com/canthonyparkinson/StringParse</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageId>TryParseNullable</PackageId>
-    <Version>1.0.2</Version>
+    <Version>2.0.0</Version>
     <Authors>canthonyparkinson@shaw.ca</Authors>
   </PropertyGroup>
 

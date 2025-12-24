@@ -50,5 +50,11 @@ namespace StringParseTests
             Assert.IsFalse(Boolean.TryParse(s).HasValue);
 
         }
+
+        [TestMethod]   
+        public void TestSpan()
+        {
+            AssertValid(Boolean.TryParse(" Yes ".AsSpan()), true);
+        }
     }
 }

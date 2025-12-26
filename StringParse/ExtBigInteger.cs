@@ -16,6 +16,10 @@ namespace ca.canthonyparkinson.StringParse
         {
             public static BigInteger? TryParse(String str) => (BigInteger.TryParse(str, out BigInteger val) ? new BigInteger?(val) : null);
             public static BigInteger? TryParse(String str, NumberStyles style, IFormatProvider provider) => (BigInteger.TryParse(str, style, provider, out BigInteger val) ? new BigInteger?(val) : null);
+            public static BigInteger? TryParse(String str, IFormatProvider provider) => (BigInteger.TryParse(str, provider, out BigInteger val) ? new BigInteger?(val) : null);
+            public static BigInteger? TryParse(ReadOnlySpan<char> str) => (BigInteger.TryParse(str, out BigInteger val) ? new BigInteger?(val) : null);
+            public static BigInteger? TryParse(ReadOnlySpan<char> str, NumberStyles style, IFormatProvider provider) => (BigInteger.TryParse(str, style, provider, out BigInteger val) ? new BigInteger?(val) : null);
+            public static BigInteger? TryParse(ReadOnlySpan<char> str, IFormatProvider provider) => (BigInteger.TryParse(str, provider, out BigInteger val) ? new BigInteger?(val) : null);
         }
     }
 }

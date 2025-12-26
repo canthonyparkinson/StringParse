@@ -15,6 +15,13 @@ namespace ca.canthonyparkinson.StringParse
         {
             public static Double? TryParse(String str) => (Double.TryParse(str, out Double val) ? new Double?(val) : null);
             public static Double? TryParse(String str, NumberStyles style, IFormatProvider provider) => (Double.TryParse(str, style, provider, out Double val) ? new Double?(val) : null);
+            public static Double? TryParse(String str, IFormatProvider provider) => (Double.TryParse(str, provider, out Double val) ? new Double?(val) : null);
+            public static Double? TryParse(ReadOnlySpan<char> str) => (Double.TryParse(str, out Double val) ? new Double?(val) : null);
+            public static Double? TryParse(ReadOnlySpan<char> str, NumberStyles style, IFormatProvider provider) => (Double.TryParse(str, style, provider, out Double val) ? new Double?(val) : null);
+            public static Double? TryParse(ReadOnlySpan<char> str, IFormatProvider provider) => (Double.TryParse(str, provider, out Double val) ? new Double?(val) : null);
+            public static Double? TryParse(ReadOnlySpan<Byte> bytes) => (Double.TryParse(bytes, out Double val) ? new Double?(val) : null);
+            public static Double? TryParse(ReadOnlySpan<Byte> bytes, NumberStyles style, IFormatProvider provider) => (Double.TryParse(bytes, style, provider, out Double val) ? new Double?(val) : null);
+            public static Double? TryParse(ReadOnlySpan<Byte> bytes, IFormatProvider provider) => (Double.TryParse(bytes, provider, out Double val) ? new Double?(val) : null);
         }
     }
 }

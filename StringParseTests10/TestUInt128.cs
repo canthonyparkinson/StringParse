@@ -15,9 +15,9 @@ namespace StringParseTests
 
         protected override UInt128 BigResult => (UInt128)123456789012345L * (UInt128)1000000000000000L;
 
-        protected override string TooBigInput => "12345678901234512345678901234500000";
+        protected override string TooBigInput => "123456789012345123456789012345000001234567890";
 
-        protected override string TooSmallInput => "-12345678901234512345678901234500000";
+        protected override string TooSmallInput => "-123456789012345123456789012345000001234567890";
 
         protected override UInt128? doConvert()
         {
